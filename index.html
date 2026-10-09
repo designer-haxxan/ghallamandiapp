@@ -1,0 +1,61 @@
+<!doctype html>
+<html lang="en" dir="ltr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="description" content="Ghalla Mandi: arrivals, auctions, farmer and buyer accounts, commission, cash book and reports for commission agents. Works offline.">
+  <meta name="theme-color" content="#1d7a4c">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline'; font-src 'self'; img-src 'self' data: blob:; connect-src 'self'; worker-src 'self'; manifest-src 'self'; base-uri 'self'; form-action 'self'; object-src 'none'">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="default">
+  <meta name="apple-mobile-web-app-title" content="Ghalla Mandi">
+  <link rel="manifest" href="manifest-en.json">
+  <link rel="icon" type="image/png" sizes="32x32" href="icons/favicon-32.png">
+  <link rel="apple-touch-icon" href="icons/apple-touch-icon.png">
+  <link rel="stylesheet" href="css/app.css">
+  <title>Ghalla Mandi</title>
+</head>
+<body>
+  <div id="boot" class="boot" role="status">
+    <div class="boot-mark"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 22V12"/><path d="M12 12c0-4 3-7 8-7 0 5-3 7-8 7z"/><path d="M12 14c0-3-2-5-6-5 0 4 2 5 6 5z"/></svg></div>
+    <div class="boot-name brand-name">Ghalla Mandi</div>
+    <div class="boot-msg" id="boot-msg">Loading…</div>
+  </div>
+
+  <div id="gate-root" class="d-none"></div>
+
+  <div id="shell" class="d-none">
+    <aside class="side" aria-label="Main">
+      <div class="brand">
+        <div class="brand-mark"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 22V12"/><path d="M12 12c0-4 3-7 8-7 0 5-3 7-8 7z"/><path d="M12 14c0-3-2-5-6-5 0 4 2 5 6 5z"/></svg></div>
+        <div><div class="brand-name">Ghalla Mandi</div><div class="brand-sub" id="side-sub">Commission agent</div></div>
+      </div>
+      <nav id="side-nav" class="side-nav"></nav>
+      <div class="side-foot">Works offline · English</div>
+    </aside>
+
+    <div class="main-col">
+      <header class="topbar">
+        <div class="topbar-l">
+          <div class="topbar-title" id="topbar-title">Home</div>
+          <div id="shop-line"></div>
+        </div>
+        <div class="topbar-r">
+          <a class="lang-btn" id="lang-switch" href="urdu.html">اردو</a>
+          <button type="button" class="icon-btn" id="lock-btn" aria-label="Lock" hidden></button>
+        </div>
+      </header>
+      <main id="content" class="content" tabindex="-1"></main>
+    </div>
+
+    <nav id="bottom-nav" class="bottom-nav" aria-label="Quick navigation"></nav>
+  </div>
+
+  <div id="sheet-root"></div>
+  <div id="toast-root" aria-live="polite"></div>
+  <div id="print-root" aria-hidden="true"></div>
+
+  <noscript><div style="padding:24px;font-family:system-ui">JavaScript is required to run Ghalla Mandi.</div></noscript>
+  <script type="module" src="js/main.js"></script>
+</body>
+</html>
